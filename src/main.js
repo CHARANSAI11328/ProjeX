@@ -39,7 +39,7 @@ class ProjexPureCinematicApp {
     const sequenceCanvas = document.getElementById('sequence-canvas');
     this.sequence = new SequenceRenderer(sequenceCanvas, {
       totalFrames: 285,
-      framePrefix: '/frames/ezgif-frame-',
+      framePrefix: `${import.meta.env.BASE_URL}frames/ezgif-frame-`,
       frameExt: '.jpg',
       onProgress: (loaded, total, pct) => {
         const fill = document.getElementById('loader-fill');
