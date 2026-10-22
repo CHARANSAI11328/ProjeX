@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ProjeX — True Cinematic Scroll Storytelling</title>
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🚀</text></svg>" />
+  <link rel="stylesheet" href="./src/style.css" />
+</head>
+<body>
+
+  <!-- APPLE-GRADE MINIMAL PRELOADER -->
+  <div id="preloader" class="apple-preloader" aria-live="polite">
+    <div class="preloader-inner">
+      <div class="preloader-brand">
+        <span class="brand-text">ProjeX</span>
+        <span class="brand-sub">Engineered Mastery</span>
+      </div>
+      <div class="preloader-progress-track">
+        <div id="loader-fill" class="preloader-progress-fill"></div>
+      </div>
+      <div id="loader-text" class="preloader-text">Initializing 3D Sequence</div>
+    </div>
+  </div>
+
+  <!-- FROSTED GLASS TOP NAVIGATION -->
+  <header class="apple-nav">
+    <div class="nav-container">
+      <a href="#" class="nav-logo" id="nav-logo" aria-label="ProjeX Home">
+        <span class="logo-mark">⌘</span>
+        <span class="logo-text">ProjeX</span>
+      </a>
+      <nav class="nav-menu" aria-label="Story Chapters">
+        <a href="#stage-awakening" class="nav-link" data-milestone="0">Awakening</a>
+        <a href="#stage-convergence" class="nav-link" data-milestone="0.25">Convergence</a>
+        <a href="#stage-architecture" class="nav-link" data-milestone="0.50">Architecture</a>
+        <a href="#stage-assembly" class="nav-link" data-milestone="0.75">Assembly</a>
+        <a href="#stage-reveal" class="nav-link" data-milestone="1.00">Reveal</a>
+        <a href="#specs" class="nav-link nav-link-highlight" id="nav-specs-link">Specs</a>
+      </nav>
+      <div class="nav-cta-wrapper">
+        <button class="nav-btn-primary" id="nav-cta-btn">Start Building</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- MASTER SCROLL TRACK (600vh scroll budget driving normalized 0.0 -> 1.0 timeline) -->
+  <div id="scroll-track" class="scroll-track">
+
+    <!-- PERSISTENT FULL-VIEWPORT CINEMATIC SCENE -->
+    <main id="cinematic-viewport" class="cinematic-viewport">
+      <!-- Hardware-Accelerated Sequence Scrubbing Canvas -->
+      <canvas id="sequence-canvas" class="cinematic-canvas"></canvas>
+
+      <!-- Atmospheric Zero-Gravity Particle Layer -->
+      <canvas id="particles-canvas" class="particles-canvas"></canvas>
+
+      <!-- Ambient Lighting & Cinematic Vignette Scrim -->
+      <div class="cinematic-vignette"></div>
+
+      <!-- ======================================================================
+           STORY STAGES: 5 MILESTONES SYNCHRONIZED TO 0%, 25%, 50%, 75%, 100%
+           ====================================================================== -->
+
+      <!-- FRAME 1 — AWAKENING (0% Milestone: Frames 1 - 72) -->
+      <section class="story-stage story-hero" id="stage-awakening">
+        <div class="story-content hero-content">
+          <div class="story-pill-badge">
+            <span class="badge-dot"></span>
+            <span>01 // ZERO-GRAVITY AWAKENING</span>
+          </div>
+          <h1 class="story-title-hero">Defy Tutorial Hell.</h1>
+          <p class="story-desc-hero">
+            Build production-grade systems from first principles. Master modern architecture through an immersive zero-gravity proof-of-work journey.
+          </p>
+          <div class="hero-actions">
+            <button class="apple-btn-white" id="hero-explore-btn">Begin Journey</button>
+            <button class="apple-btn-glass" id="hero-specs-btn">System Specs</button>
+          </div>
+          <div class="scroll-hint" id="scroll-hint">
+            <span class="scroll-mouse"><span class="scroll-wheel"></span></span>
+            <span class="scroll-hint-label">Scroll to travel forward</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- FRAME 2 — CONVERGENCE (25% Milestone: Frames 72 - 143) -->
+      <section class="story-stage story-split-left" id="stage-convergence">
+        <div class="story-content story-card-glass" data-lenis-prevent>
+          <div class="stage-tag-row">
+            <span class="stage-num">02</span>
+            <span class="story-eyebrow">Convergence</span>
+          </div>
+          <h2 class="story-headline">Every technology in lockstep.</h2>
+          <p class="story-desc">
+            No fragmented tutorials or obsolete packages. Every modern enterprise framework, API contract, and cloud service converges in real time around a singular core.
+          </p>
+          <div class="tech-pills">
+            <span class="tech-tag">React 19</span>
+            <span class="tech-tag">Python 3.12</span>
+            <span class="tech-tag">FastAPI</span>
+            <span class="tech-tag">Docker</span>
+            <span class="tech-tag">PostgreSQL</span>
+            <span class="tech-tag">Distributed Microservices</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- FRAME 3 — ARCHITECTURE (50% Milestone: Frames 143 - 214) -->
+      <section class="story-stage story-split-right" id="stage-architecture">
+        <div class="story-content story-card-glass" data-lenis-prevent>
+          <div class="stage-tag-row">
+            <span class="stage-num">03</span>
+            <span class="story-eyebrow">Architecture</span>
+          </div>
+          <h2 class="story-headline">Deconstructed down to the wire.</h2>
+          <p class="story-desc">
+            Move deep into the assembled technology ring to inspect the multilayer blueprint — from reactive state graphs to resilient API contracts and normalized database schemas.
+          </p>
+          <div class="blueprint-pills">
+            <div class="blueprint-item">
+              <span class="blueprint-dot"></span>
+              <span class="blueprint-label">01 / Reactive Client UI State Graph</span>
+            </div>
+            <div class="blueprint-item">
+              <span class="blueprint-dot"></span>
+              <span class="blueprint-label">02 / High-Throughput API Gateway</span>
+            </div>
+            <div class="blueprint-item">
+              <span class="blueprint-dot"></span>
+              <span class="blueprint-label">03 / Distributed Database Blueprint</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- FRAME 4 — ASSEMBLY & TRANSFORMATION (75% Milestone: Frames 214 - 285) -->
+      <section class="story-stage story-split-left" id="stage-assembly">
+        <div class="story-content story-card-glass" data-lenis-prevent>
+          <div class="stage-tag-row">
+            <span class="stage-num">04</span>
+            <span class="story-eyebrow">Assembly &amp; Transformation</span>
+          </div>
+          <h2 class="story-headline">Assembled from first principles.</h2>
+          <p class="story-desc">
+            Navigate through illuminated roadmaps and floating digital components. Watch isolated lines of code integrate into living, deployable systems with verifiable telemetry.
+          </p>
+          <div class="assembly-features">
+            <div class="feature-capsule">
+              <span class="feature-icon">⚡</span>
+              <span class="feature-text">Automated CI/CD Verification</span>
+            </div>
+            <div class="feature-capsule">
+              <span class="feature-icon">☁</span>
+              <span class="feature-text">Production Cloud Infrastructure</span>
+            </div>
+            <div class="feature-capsule">
+              <span class="feature-icon">📊</span>
+              <span class="feature-text">Provable Benchmark Telemetry</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- FRAME 5 — REVEAL (100% Milestone: Permanent Visual Destination) -->
+      <section class="story-stage story-reveal-stage" id="stage-reveal">
+        <!-- Top Cinematic Banner -->
+        <div class="reveal-top-banner">
+          <div class="story-pill-badge">
+            <span class="badge-dot badge-dot-cyan"></span>
+            <span>05 // FINAL DESTINATION — REVEAL</span>
+          </div>
+          <h2 class="story-headline reveal-headline">Projects that speak for themselves.</h2>
+          <p class="story-desc reveal-desc">
+            The journey culminates in verified engineering proof-of-work. Live cloud telemetry that hiring teams and engineering leaders can benchmark.
+          </p>
+        </div>
+
+        <!-- Center Floating Action Deck & Metrics Strip -->
+        <div class="reveal-destination-deck">
+          <div class="destination-actions">
+            <button class="apple-btn-white apple-btn-glow" id="reveal-cta-btn">Start Building Free</button>
+            <button class="apple-btn-glass" id="reveal-specs-btn">View System Specs</button>
+            <button class="apple-btn-glass" id="reveal-terminal-btn">Quickstart Terminal</button>
+          </div>
+
+          <!-- Integrated High-Performance Metrics Strip -->
+          <div class="destination-metrics-strip">
+            <div class="dest-metric">
+              <span class="dest-metric-value">285</span>
+              <span class="dest-metric-label">HD 3D Sequence Frames</span>
+            </div>
+            <div class="dest-metric-divider"></div>
+            <div class="dest-metric">
+              <span class="dest-metric-value">120 FPS</span>
+              <span class="dest-metric-label">Hardware-Accelerated Scrub</span>
+            </div>
+            <div class="dest-metric-divider"></div>
+            <div class="dest-metric">
+              <span class="dest-metric-value">100%</span>
+              <span class="dest-metric-label">Production-Grade Mastery</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Integrated Minimal Footer Strip (Positioned seamlessly at bottom of Frame 5) -->
+        <div class="reveal-footer-strip">
+          <div class="footer-strip-left">
+            <span class="footer-brand-tag">⌘ ProjeX</span>
+            <span class="footer-copy">© 2026 ProjeX Inc. Full cinematic scroll storytelling runtime.</span>
+          </div>
+          <div class="footer-strip-right">
+            <a href="#" class="footer-strip-link" id="footer-specs-link">System Specs</a>
+            <a href="https://github.com" target="_blank" rel="noopener" class="footer-strip-link">GitHub</a>
+            <a href="#" class="footer-strip-link" id="footer-privacy-link">Privacy</a>
+            <a href="#" class="footer-strip-link" id="footer-terms-link">Terms</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- FLOATING CHAPTER SCRUBBER (5 MILESTONES) -->
+      <nav class="chapter-scrubber" aria-label="Timeline Navigation">
+        <div class="chapter-pill-container">
+          <button class="chapter-btn active" data-chapter="0" data-target="0" title="Frame 1: Awakening">
+            <span class="chapter-dot"></span>
+            <span class="chapter-text">Awakening</span>
+          </button>
+          <button class="chapter-btn" data-chapter="1" data-target="0.25" title="Frame 2: Convergence">
+            <span class="chapter-dot"></span>
+            <span class="chapter-text">Convergence</span>
+          </button>
+          <button class="chapter-btn" data-chapter="2" data-target="0.50" title="Frame 3: Architecture">
+            <span class="chapter-dot"></span>
+            <span class="chapter-text">Architecture</span>
+          </button>
+          <button class="chapter-btn" data-chapter="3" data-target="0.75" title="Frame 4: Assembly &amp; Transformation">
+            <span class="chapter-dot"></span>
+            <span class="chapter-text">Assembly</span>
+          </button>
+          <button class="chapter-btn" data-chapter="4" data-target="1.00" title="Frame 5: Reveal">
+            <span class="chapter-dot"></span>
+            <span class="chapter-text">Reveal</span>
+          </button>
+        </div>
+        <div class="chapter-progress-track">
+          <div id="scrub-progress-fill" class="chapter-progress-fill"></div>
+        </div>
+      </nav>
+
+    </main>
+  </div>
+
+  <!-- ======================================================================
+       INTERACTIVE FROSTED GLASS SPECS HUD MODAL
+       ====================================================================== -->
+  <div id="specs-hud" class="hud-modal-overlay" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="specs-title">
+    <div class="hud-modal-backdrop" id="specs-hud-backdrop"></div>
+    <div class="hud-modal-panel" data-lenis-prevent>
+      <div class="hud-modal-header">
+        <div class="hud-header-info">
+          <span class="hud-eyebrow">Engineered For Execution</span>
+          <h2 id="specs-title" class="hud-title">System Specifications &amp; Architecture</h2>
+          <p class="hud-subtitle">Bridging the chasm between syntax tutorials and industry-level engineering mastery.</p>
+        </div>
+        <button class="hud-close-btn" id="specs-hud-close" aria-label="Close Specifications">✕</button>
+      </div>
+
+      <div class="hud-pillars-grid">
+        <div class="hud-pillar-card">
+          <div class="pillar-top">
+            <span class="pillar-num">01</span>
+            <span class="pillar-tag">Specification</span>
+          </div>
+          <h3 class="pillar-title">Architectural Blueprints</h3>
+          <p class="pillar-desc">
+            Comprehensive system design specs decomposing frontend state machines, API routes, caching layers, and database schemas before writing code.
+          </p>
+          <ul class="pillar-list">
+            <li>Reactive Client State Machine Models</li>
+            <li>Zero-Trust API Gateway Contracts</li>
+            <li>Normalized Relational Blueprints</li>
+          </ul>
+        </div>
+
+        <div class="hud-pillar-card">
+          <div class="pillar-top">
+            <span class="pillar-num">02</span>
+            <span class="pillar-tag">Process</span>
+          </div>
+          <h3 class="pillar-title">Guided Milestones</h3>
+          <p class="pillar-desc">
+            Step-by-step verified execution pathways that keep you in flow, eliminating decision paralysis, rabbit holes, and outdated stack drift.
+          </p>
+          <ul class="pillar-list">
+            <li>Granular Milestone Checkpoints</li>
+            <li>Instant Automated Diagnostics</li>
+            <li>Production-Grade Error Recovery</li>
+          </ul>
+        </div>
+
+        <div class="hud-pillar-card">
+          <div class="pillar-top">
+            <span class="pillar-num">03</span>
+            <span class="pillar-tag">Verification</span>
+          </div>
+          <h3 class="pillar-title">Verified Proof-of-Work</h3>
+          <p class="pillar-desc">
+            Deploy live cloud infrastructure with provable architectural telemetry that hiring managers and engineering leads can test and benchmark.
+          </p>
+          <ul class="pillar-list">
+            <li>Live Cloud Deployment Sandbox</li>
+            <li>Auditable Benchmark Telemetry</li>
+            <li>Verified Portfolio Credential</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="hud-modal-footer">
+        <div class="hud-status-chip">
+          <span class="status-pulse-dot"></span>
+          <span>Engine Status: 100% Operational // All 5 Milestones Verified</span>
+        </div>
+        <div class="hud-footer-actions">
+          <button class="apple-btn-glass" id="specs-hud-dismiss">Close</button>
+          <button class="apple-btn-white apple-btn-glow" id="specs-hud-launch">Start Building</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ======================================================================
+       INTERACTIVE DEVELOPER LAUNCH MODAL
+       ====================================================================== -->
+  <div id="launch-modal" class="hud-modal-overlay" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="launch-title">
+    <div class="hud-modal-backdrop" id="launch-modal-backdrop"></div>
+    <div class="hud-modal-panel launch-panel" data-lenis-prevent>
+      <div class="hud-modal-header">
+        <div class="hud-header-info">
+          <span class="hud-eyebrow">Developer Quickstart</span>
+          <h2 id="launch-title" class="hud-title">Deploy ProjeX to Your Machine</h2>
+          <p class="hud-subtitle">Initialize your production workspace and step into the architecture pipeline in seconds.</p>
+        </div>
+        <button class="hud-close-btn" id="launch-modal-close" aria-label="Close Terminal">✕</button>
+      </div>
+
+      <div class="terminal-box">
+        <div class="terminal-bar">
+          <span class="term-dot dot-red"></span>
+          <span class="term-dot dot-yellow"></span>
+          <span class="term-dot dot-green"></span>
+          <span class="term-title">bash — projex-cli</span>
+        </div>
+        <div class="terminal-body">
+          <span class="term-prompt">$</span>
+          <span class="term-cmd" id="terminal-cmd">npx projex init real-world-system</span>
+          <button class="term-copy-btn" id="term-copy-btn" title="Copy to clipboard">Copy</button>
+        </div>
+      </div>
+
+      <div class="quickstart-form">
+        <p class="form-instruction">Or enter your email for developer early access and sandbox credentials:</p>
+        <form id="launch-form" class="form-row" onsubmit="event.preventDefault(); alert('Welcome to ProjeX! Access credential generated.');">
+          <input type="email" class="apple-input" placeholder="developer@company.com" required />
+          <button type="submit" class="apple-btn-white apple-btn-glow">Claim Sandbox Access</button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- VITE SCRIPT ENTRY -->
+  <script type="module" src="./src/main.js"></script>
+</body>
+</html>
